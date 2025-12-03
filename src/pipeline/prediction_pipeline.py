@@ -25,6 +25,7 @@ class prediction_pipeline:
 
         pred = model.predict(df)
         print('Pridiction:', pred)
+        return pred[0]
 
 data = {
 
@@ -33,5 +34,9 @@ data = {
             'lsa_summary': 'Internationally recognized regulation is now a',
         }
 
-pp = prediction_pipeline()
-pp.prediction(data)
+if __name__=='__main__':
+
+    pp = prediction_pipeline()
+    pp.prediction(data)
+
+
